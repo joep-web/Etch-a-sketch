@@ -1,4 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Ysabeau:wght@300&display=swap');
+
+
+:root {
+  --main-bg: #FFFDF9;
+  --outlines: #392B0B;
+}
+
 html {
   height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg);
+  color: var(--main-bg);
+  font-size: 16px;
+  font-family: Ysabeau, sans-serif;
+}
+
+.main {
+  align-items: center;
+  background: var(--outlines);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+  width: 80%;
+}
+
+h1 {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.grid {
+  margin: 4% 0;
+  height: 300px;
+  width: 90%;
+  border-radius: 5px;
+  background: var(--main-bg);
+}
+
+.controls {
+  font-size: 0.9rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#grid-count {
+  font-size: 1.4rem;
+}
+
+.range-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+input[type="range"] {
+  width: 75%;
+}
+
+.btns-cont { 
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+
+.btns-cont div {
+  background: var(--main-bg);
+  border-radius: 50%;
+  color: var(--outlines);
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+.outer-cont {
   width: 100%;
 }
