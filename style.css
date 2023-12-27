@@ -4,6 +4,7 @@
 :root {
   --main-bg: #FFFDF9;
   --outlines: #392B0B;
+  --range-thumb-b: #E5E7EB;
 }
 
 html {
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-  height: 100dvh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -52,6 +53,7 @@ h1 {
   width: 90%;
   border-radius: 5px;
   background: var(--main-bg);
+  display: grid;
 }
 
 .controls {
@@ -73,8 +75,44 @@ h1 {
 }
 
 input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
   width: 75%;
 }
+
+input[type="range"]::-moz-range-track {
+  height: 0.5rem;
+  background: var(--main-bg);
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  background: var(--main-bg);
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 0.1rem solid var(--main-bg);
+  background: var(--outlines);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 0.1rem solid var(--range-thumb-b);
+  background: var(--outlines);
+  margin-top: -1px;
+}
+
+
 
 .btns-cont { 
   font-size: 0.7rem;
@@ -96,4 +134,17 @@ input[type="range"] {
 
 .outer-cont {
   width: 100%;
+}
+
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+  .grid {
+    height:  200px;
+    margin: 1% 0;
+  }
+
+  .main {
+    padding: 2%;
+    width: 60%;
+  }
 }
