@@ -137,6 +137,16 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
+.each-div {
+  background: #F9FAF8;
+  border: solid 1px black;
+}
+
+.each-div:hover {
+  background: red;
+}
+
+
 @media screen and (min-width: 800px) and (orientation: landscape) {
   .grid {
     height:  200px;
