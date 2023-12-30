@@ -126,12 +126,17 @@ input[type="range"]::-webkit-slider-thumb {
   height: 45px;
 }
 
-
-
 .outer-cont {
   width: 100%;
 }
 
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 @media screen and (min-width: 800px) and (orientation: landscape) {
   .grid {
